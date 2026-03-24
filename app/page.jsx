@@ -1097,7 +1097,7 @@ function ContactPage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              ["📍", "Lokasi", "Jl. Ciledug Barat RT/RW 002/003 Tangerang Banten 15418"],
+              ["📍", "Lokasi", "📍 Jl. Ciledug Barat RT/RW 002/003, Tangerang Banten 15418"],
               ["📞", "Telepon / WhatsApp", "+62 851-5726-6243"],
               ["📧", "Email", "hello.rempahjawa@gmail.com"],
               ["🕐", "Jam Operasional", "Senin–Sabtu\n08.00–17.00 WIB"],
@@ -1153,7 +1153,7 @@ function Footer({ setPage }) {
             <div style={{ fontFamily: "sans-serif", color: "#5A4A3A", fontSize: 13, lineHeight: 2 }}>
               📞 +62 851-5726-6243<br/>
               📧 hello.rempahjawa@gmail.com<br/>
-              📍 Tangerang Banten
+              📍 Jl. Ciledug Barat RT/RW 002/003, Tangerang Banten 15418
             </div>
           </div>
         </div>
