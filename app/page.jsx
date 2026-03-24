@@ -1097,8 +1097,8 @@ function ContactPage() {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              ["📍", "Lokasi", "Jl. Ciledug Barat RT/RW 002/003\nTangerang Banten 15418"],
-              ["📞", "Telepon / WhatsApp", "+62 812-xxxx-xxxx"],
+              ["📍", "Lokasi", "Jl. Ciledug Barat RT/RW 002/003 Tangerang Banten 15418"],
+              ["📞", "Telepon / WhatsApp", "+62 851-5726-6243"],
               ["📧", "Email", "hello.rempahjawa@gmail.com"],
               ["🕐", "Jam Operasional", "Senin–Sabtu\n08.00–17.00 WIB"],
             ].map(([ic, lbl, val]) => (
@@ -1110,7 +1110,7 @@ function ContactPage() {
                 </div>
               </div>
             ))}
-            <a href="https://wa.me/62812xxxxxxxx?text=Halo Rempah Jawa, saya ingin bertanya..." target="_blank" rel="noreferrer"
+            <a href="https://wa.me/6285157266243?text=Halo Rempah Jawa, saya ingin bertanya..." target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "#25D366", borderRadius: 14, padding: "15px", color: "white", fontWeight: 700, fontFamily: "sans-serif", textDecoration: "none", fontSize: 15 }}>
               💬 Chat via WhatsApp
             </a>
@@ -1151,7 +1151,7 @@ function Footer({ setPage }) {
           <div>
             <h4 style={{ fontFamily: "sans-serif", color: "#F5E6C8", fontSize: 14, fontWeight: 600, marginBottom: 14 }}>Kontak</h4>
             <div style={{ fontFamily: "sans-serif", color: "#5A4A3A", fontSize: 13, lineHeight: 2 }}>
-              📞 +62 812-xxxx-xxxx<br/>
+              📞 +62 851-5726-6243<br/>
               📧 hello.rempahjawa@gmail.com<br/>
               📍 Tangerang Banten
             </div>
@@ -1212,7 +1212,7 @@ export default function App() {
       <PreOrderModal product={preOrderProduct} onClose={() => setPreOrderProduct(null)} onSubmit={() => {}}/>
 
       {/* Floating WA button */}
-      <a href="https://wa.me/62812xxxxxxxx" target="_blank" rel="noreferrer"
+      <a href="https://wa.me/6285157266243" target="_blank" rel="noreferrer"
         style={{ position: "fixed", bottom: 24, right: 24, width: 56, height: 56, borderRadius: "50%", background: "#25D366", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, textDecoration: "none", boxShadow: "0 8px 24px rgba(37,211,102,0.4)", zIndex: 90 }}>
         💬
       </a>
