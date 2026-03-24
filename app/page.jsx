@@ -740,7 +740,7 @@ function CheckoutPage({ cart, onBack, onSuccess }) {
             </div>
             <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
               <button onClick={onSuccess} style={{ background: "linear-gradient(135deg,#8BC34A,#5D9E21)", border: "none", borderRadius: 12, padding: "13px 32px", color: "white", fontWeight: 700, fontFamily: "sans-serif", fontSize: 15, cursor: "pointer" }}>🏠 Kembali ke Beranda</button>
-              <a href="https://wa.me/62xxxxxxxxxx?text=Halo, saya baru saja melakukan pemesanan" target="_blank" rel="noreferrer"
+              <a href="https://wa.me/6285157266243?text=Halo, saya baru saja melakukan pemesanan" target="_blank" rel="noreferrer"
                 style={{ display: "flex", alignItems: "center", gap: 8, background: "#25D366", border: "none", borderRadius: 12, padding: "13px 24px", color: "white", fontWeight: 700, fontFamily: "sans-serif", fontSize: 15, textDecoration: "none" }}>
                 💬 Konfirmasi via WA
               </a>
@@ -882,7 +882,7 @@ function AdminPage() {
         <div style={{ width: 220, minHeight: "calc(100vh - 68px)", background: "#0E0C08", borderRight: "1px solid rgba(255,255,255,0.06)", padding: "24px 0", position: "sticky", top: 68, flexShrink: 0 }}>
           <div style={{ padding: "0 16px 24px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
             <div style={{ fontFamily: "sans-serif", fontSize: 12, color: "#4B5563", letterSpacing: 1, marginBottom: 4 }}>LOGGED IN AS</div>
-            <div style={{ fontFamily: "sans-serif", fontSize: 14, color: "#8BC34A", fontWeight: 600 }}>admin@rempah-jawa.id</div>
+            <div style={{ fontFamily: "sans-serif", fontSize: 14, color: "#8BC34A", fontWeight: 600 }}>hello.rempahjawa@gmail.com</div>
           </div>
           {[["orders", "📋", "Pre-Orders"], ["products", "📦", "Produk"], ["analytics", "📊", "Analitik"]].map(([tab, ic, lbl]) => (
             <button key={tab} onClick={() => setActiveTab(tab)} style={{
@@ -1091,14 +1091,14 @@ function ContactPage() {
                   <textarea rows={5} value={form.message} onChange={e => setForm(p => ({ ...p, message: e.target.value }))}
                     style={{ width: "100%", boxSizing: "border-box", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, padding: "10px 14px", color: "#F5E6C8", fontFamily: "sans-serif", fontSize: 14, outline: "none", resize: "vertical" }}/>
                 </div>
-                <button onClick={() => setSent(true)} style={{ width: "100%", background: "linear-gradient(135deg,#8BC34A,#5D9E21)", border: "none", borderRadius: 12, padding: "13px", color: "white", fontWeight: 700, fontFamily: "sans-serif", cursor: "pointer" }}>Kirim Pesan</button>
+                <button onClick={async () => { if (!form.name || !form.email || !form.message) { alert("Mohon isi semua field"); return; } try { const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) }); if (res.ok) setSent(true); else alert("Gagal kirim pesan, coba lagi"); } catch { alert("Gagal kirim pesan, coba lagi"); } }} style={{ width: "100%", background: "linear-gradient(135deg,#8BC34A,#5D9E21)", border: "none", borderRadius: 12, padding: "13px", color: "white", fontWeight: 700, fontFamily: "sans-serif", cursor: "pointer" }}>Kirim Pesan</button>
               </>
             )}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              ["📍", "Lokasi", "Jl. Ciledug barat RT/RW 002/003, Tangerang Banten 15418"],
-              ["📞", "Telepon / WhatsApp", "+62 851-5726-62433"],
+              ["📍", "Lokasi", "Jl. Ciledug Barat RT/RW 002/003\nTangerang Banten 15418"],
+              ["📞", "Telepon / WhatsApp", "+62 812-xxxx-xxxx"],
               ["📧", "Email", "hello.rempahjawa@gmail.com"],
               ["🕐", "Jam Operasional", "Senin–Sabtu\n08.00–17.00 WIB"],
             ].map(([ic, lbl, val]) => (
@@ -1110,7 +1110,7 @@ function ContactPage() {
                 </div>
               </div>
             ))}
-            <a href="https://wa.me/6285157266243?text=Halo Rempah Jawa, saya ingin bertanya..." target="_blank" rel="noreferrer"
+            <a href="https://wa.me/62812xxxxxxxx?text=Halo Rempah Jawa, saya ingin bertanya..." target="_blank" rel="noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, background: "#25D366", borderRadius: 14, padding: "15px", color: "white", fontWeight: 700, fontFamily: "sans-serif", textDecoration: "none", fontSize: 15 }}>
               💬 Chat via WhatsApp
             </a>
@@ -1151,9 +1151,9 @@ function Footer({ setPage }) {
           <div>
             <h4 style={{ fontFamily: "sans-serif", color: "#F5E6C8", fontSize: 14, fontWeight: 600, marginBottom: 14 }}>Kontak</h4>
             <div style={{ fontFamily: "sans-serif", color: "#5A4A3A", fontSize: 13, lineHeight: 2 }}>
-              📞 +62 851-5726-62433<br/>
+              📞 +62 812-xxxx-xxxx<br/>
               📧 hello.rempahjawa@gmail.com<br/>
-              📍 Jl. Ciledug barat RT/RW 002/003, Tangerang Banten 15418
+              📍 Tangerang Banten
             </div>
           </div>
         </div>
@@ -1212,7 +1212,7 @@ export default function App() {
       <PreOrderModal product={preOrderProduct} onClose={() => setPreOrderProduct(null)} onSubmit={() => {}}/>
 
       {/* Floating WA button */}
-      <a href="https://wa.me/6285157266243" target="_blank" rel="noreferrer"
+      <a href="https://wa.me/62812xxxxxxxx" target="_blank" rel="noreferrer"
         style={{ position: "fixed", bottom: 24, right: 24, width: 56, height: 56, borderRadius: "50%", background: "#25D366", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, textDecoration: "none", boxShadow: "0 8px 24px rgba(37,211,102,0.4)", zIndex: 90 }}>
         💬
       </a>
